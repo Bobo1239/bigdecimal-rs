@@ -537,7 +537,7 @@ impl<'a, 'b> Div<&'b BigDecimal> for &'a BigDecimal {
         let mut remainder = remainder * BIG_TEN;
         let mut quotient = quotient;
 
-        let MAX_ITERATIONS = 100;
+        let MAX_ITERATIONS = 200;
         let mut iteration_count = 0;
         while remainder != BigInt::zero() && iteration_count < MAX_ITERATIONS {
             let (q, r) = remainder.div_rem(&den);
